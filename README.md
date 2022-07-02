@@ -16,6 +16,10 @@ REST-Rant is an app where users can review restaurants.
 
 ```
 
+## COLOR SCHEMES
+
+BASED ON STATE FLAG
+
 ## HTTP REQUESTS
 
 **Method** | **Path** | **Purpose**
@@ -45,3 +49,14 @@ GET           |  *                        |   *404 page (matches any route not d
 -------------------------------------------------------------------------------------------------
 
 ```
+
+## DATA STORAGE
+
+CREATE JSON OBJECT OF PLACES AND RELATED INFO
+
+PLACES{
+NAME,
+STATE,
+CUISINE,
+IMAGE
+}
