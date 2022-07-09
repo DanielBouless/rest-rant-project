@@ -9,6 +9,13 @@ function Def (html) {
                 <link rel='stylesheet' href='/css/style.css'/>
             </head>
             <body>
+                <nav>
+                    <ul>
+                        <li><a herf='/'>Home</a></li>
+                        <li><a herf='/places'>Places</a></li>
+                        <li><a herf='/palces/new'>Add Place</a></li>
+                    </ul>
+                </nav>
                 {html.children}
             </body>
         </html>

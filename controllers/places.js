@@ -17,6 +17,14 @@ router.get('/:arrayIndex',(req,res)=>{
         place: places[req.params.arrayIndex]
     })
 })
+router.get('/:id',(req,res)=>{
+  let id = Number(req.params.id)
+  if(isNaN(id)){
+    res.render('error404')
+  }else{
+    res.render('/places/show', {place:places[id]})
+  }
+})
 
 router.get('/editplace',(req,res)=>{
     res.render('places/editplace')
