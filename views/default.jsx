@@ -11,9 +11,9 @@ function Def (html) {
             <body>
                 <nav>
                     <ul>
-                        <li><a herf='/'>Home</a></li>
-                        <li><a herf='/places'>Places</a></li>
-                        <li><a herf='/palces/new'>Add Place</a></li>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/places'>Places</a></li>
+                        <li><a href='/places/new'>Add Place</a></li>
                     </ul>
                 </nav>
                 {html.children}

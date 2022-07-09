@@ -12,23 +12,38 @@ router.get('/new',(req,res)=>{
     res.render('places/new')
 })
 
-router.get('/:arrayIndex',(req,res)=>{
-    res.render('places/showplace',{
-        place: places[req.params.arrayIndex]
-    })
-})
+// router.get('/:arrayIndex',(req,res)=>{
+//     res.render('places/showplace',{
+//         place: places[req.params.arrayIndex]
+//     })
+// })
 router.get('/:id',(req,res)=>{
   let id = Number(req.params.id)
   if(isNaN(id)){
     res.render('error404')
   }else{
-    res.render('/places/show', {place:places[id]})
+    res.render('places/show', {place:places[id]}, id)
   }
 })
 
-router.get('/editplace',(req,res)=>{
+router.get('/edit',(req,res)=>{
     res.render('places/editplace')
 })
+
+router.delete('/places/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id, 1)
+    res.redirect('/places')
+  }
+})
+
 
 router.get('/')
 
