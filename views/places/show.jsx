@@ -6,7 +6,7 @@ function show (data) {
         <Def>
           <main>
             <h1>{ data.place.name }</h1>
-
+            <img className='col align-items-center' src={data.place.pic} alt={data.place.name}/>
             <p>Currently unrated</p>
             <p>Currently no comments</p>
             <a href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit</a>  
