@@ -22,7 +22,7 @@ router.get('/:id',(req,res)=>{
   if(isNaN(id)){
     res.render('error404')
   }else{
-    res.render('places/show', {place:places[id]}, id)
+    res.render('places/show', {place:places[id], id})
   }
 })
 
@@ -30,7 +30,7 @@ router.get('/edit',(req,res)=>{
     res.render('places/editplace')
 })
 
-router.delete('/places/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
     res.render('error404')
