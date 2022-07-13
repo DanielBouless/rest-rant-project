@@ -20,6 +20,10 @@ function new_form(){
                     <label htmlFor="cuisines">Cuisines</label>
                     <input className='form-control' type='text' id='cuisines' name='cuisines' required/>
                 </div>
+                <div className='form-group'> 
+                    <label htmlFor="founded">Year Founded</label>
+                    <input className='form-control' type='text' id='founded' name='founded' />
+                </div>
                 <div className='form-group'>
                     <label htmlFor="city">City</label>
                     <input className='form-control' type='text' id='city' name='city'/>
