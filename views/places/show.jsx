@@ -2,6 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+
     let comments = (
       <h3 className="inactive">
         No comments yet!
