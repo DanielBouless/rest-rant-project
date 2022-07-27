@@ -19,6 +19,7 @@ async function seed() {
     //save the place now that it has comment
     await place.save()
     
+
     // Exit the program
     process.exit()
 }

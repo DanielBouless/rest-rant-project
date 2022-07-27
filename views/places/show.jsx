@@ -33,7 +33,6 @@ function show (data) {
         </h3>
       </div>
       <div className="col-sm-6">
-        ...
         <h2>
           Description
         </h2>
@@ -43,13 +42,12 @@ function show (data) {
         <h4>
           Serving {data.place.cuisines}
         </h4>
-        ...
     </div>
     </div>
-    <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+    <a href={`/places/${data.place.id}/edit`} className="btn btn-warning"> 
   Edit
 </a>  
-<form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+<form method="POST" action={`/places/${data.place.id}?_method=DELETE`}> 
   <button type="submit" className="btn btn-danger">
     Delete
   </button>
@@ -58,6 +56,37 @@ function show (data) {
     <hr/>
     <h2>Comments</h2>
     {comments}
+<form method="POST" action={`/places/${data.place.id}/comment?_method=PUT`}>
+<div className="form-group">
+<div className="mb-3 col-sm-6">
+  <label htmlFor="exampleFormControlInput1" className="form-label" >Your Name</label>
+  <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Name" name='author'/>
+</div>
+<div className="mb-3 col-sm-6">
+  <label htmlFor="exampleFormControlTextarea1" className="form-label ">Enter Your Stupid Comment Here</label>
+  <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name='content'></textarea>
+</div>
+Rating:
+<div className="input-group mb-3">
+  <button className="btn btn-outline-secondary" type="button">1 Star</button>
+  <button className="btn btn-outline-secondary" type="button">2 Star</button>
+  <button className="btn btn-outline-secondary" type="button">3 Star</button>
+  <button className="btn btn-outline-secondary" type="button">4 Star</button>
+  <button className="btn btn-outline-secondary" type="button">5 Star</button>
+  <input type="text" className="form-control" placeholder="" aria-label="Example text with two button addons" name='stars'/>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="number" value="" id="flexCheckDefault" name='rant'/>
+  <label class="form-check-label" for="flexCheckDefault">
+    Rant
+  </label>
+</div>
+</div>
+  <button type="submit" className="btn btn-warning">
+    Comment
+  </button>
+</form>
+
   </main>
 </Def>
 
@@ -65,7 +94,6 @@ function show (data) {
 }
 
 module.exports = show
-
 
 
 
